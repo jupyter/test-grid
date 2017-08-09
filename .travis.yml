@@ -8,4 +8,8 @@ env:
 install:
   - pip install --upgrade setuptools pip
   - pip install --upgrade -r requirements.txt
+  - |
+    if [ -f $TEST/requirements.txt ]; then
+      pip install --upgrade -r $TEST/requirements.txt
+    fi
 script: bash run_test.sh
