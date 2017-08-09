@@ -1,11 +1,11 @@
 language: python
 python:
   - 3.6
+env:
+  matrix:
+    - TEST=traitlets-master-downstream-stable
+    # - TEST=jack-of-none
 install:
   - pip install --upgrade setuptools pip
   - pip install --upgrade -r requirements.txt
 script: bash run_test.sh
-matrix:
-  env:
-    - TEST=traitlets-master-downstream-stable
-    # - TEST=jack-of-none
