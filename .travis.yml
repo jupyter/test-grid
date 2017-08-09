@@ -4,7 +4,7 @@ python:
 env:
   matrix:
     - TEST=traitlets-master-downstream-stable
-    # - TEST=jack-of-none
+    - TEST=jack-of-none
 install:
   - pip install --upgrade setuptools pip
   - pip install --upgrade -r requirements.txt
