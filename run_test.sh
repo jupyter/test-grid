@@ -2,8 +2,9 @@
 set -ex
 
 cd "$TEST"
+
 if [ -f test.sh ]; then
-    . test.sh
+  . test.sh
 else
-    . ../default-test.sh
+  . ../default/test.sh
 fi
