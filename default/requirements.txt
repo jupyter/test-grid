@@ -1,0 +1,9 @@
+traitlets
+ipython[test]
+nbformat
+jupyter_core
+ipykernel[test]
+jupyter_client[test]
+nbconvert[test]
+notebook[test]
+ipywidgets
