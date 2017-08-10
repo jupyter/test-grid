@@ -1,5 +1,7 @@
 # test-grid
 
+[![Build Status](https://travis-ci.org/minrk/test-grid.svg?branch=master)](https://travis-ci.org/minrk/test-grid)
+
 Extra tests for combined Jupyter projects, for use as Travis cron jobs.
 
 Each test dir may have the following:
