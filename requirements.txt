@@ -1,7 +1,6 @@
 # general requirements
 mock
 nose
-nose2
 path.py
 pytest
 requests
