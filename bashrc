@@ -16,7 +16,7 @@ function install_gh() {
     git clone --depth 1 $branch https://github.com/$1/$2
     pushd $2
     git log -1
-    pip install .
+    pip install --upgrade --upgrade-strategy=only-if-needed .
     popd
     rm -rf $2
 }
