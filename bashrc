@@ -1,10 +1,18 @@
 # general scripting utilities
 
 function show_head() {
-    echo -e "\n\n\n$1\n"
     td="$(mktemp -d)"
-    git clone --depth 1 "https://github.com/$1" "$td"
+    repo=$1
+    if [[ "$repo" != *"://"* ]]; then
+      repo="https://github.com/$1"
+    fi
+    if [[ "$repo" == *"@"* ]]; then
+      branch="-b $(echo $repo | sed s/.*@//)"
+      repo=$(echo $repo | sed s/@.*//)
+    fi
+    git clone -q --depth 1 $branch $repo "$td"
     pushd "$td"
+    echo $1
     git log -1
     popd
     rm -rf "$td"

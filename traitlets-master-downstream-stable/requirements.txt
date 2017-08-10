@@ -1,4 +1,5 @@
 # general requirements
+git+https://github.com/ipython/traitlets
 ipython[test]
 nbformat
 jupyter_core
