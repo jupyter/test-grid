@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+
 # default tests to run (runs the test command for every package)
-# use this if the default tests are what you want
+# if no test.sh is defined, this will run instead
+
 py.test --pyargs traitlets
 py.test --pyargs jupyter_core
 iptest

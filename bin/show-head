@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# show the latest commit of a repo
+# accepts pip https://github.com/repo@branch urls
+
+set -e
+
+repo=$1
+
+# allow ipython/ipython alias for github url
+if [[ "$repo" != *"://"* ]]; then
+  repo="https://github.com/$1"
+fi
+
+# trim #egg=
+repo=$(echo $repo | sed s/#.*//)
+
+# handle @branch/commit
+if [[ "$repo" == *"@"* ]]; then
+  branch="-b $(echo $repo | sed s/.*@//)"
+  repo=$(echo $repo | sed s/@.*//)
+fi
+
+td="$(mktemp -d)"
+git clone -q --depth 1 $branch $repo "$td"
+cd "$td"
+git log -1
+cd -
+rm -rf "$td"

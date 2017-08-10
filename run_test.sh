@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -ex
-source ./bashrc
-cd $TEST
+
+cd "$TEST"
 if [ -f test.sh ]; then
     . test.sh
 else

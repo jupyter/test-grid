@@ -1,0 +1,9 @@
+git+https://github.com/ipython/traitlets#egg=traitlets
+git+https://github.com/jupyter/jupyter_core#egg=jupyter_core
+git+https://github.com/jupyter/nbformat#egg=nbformat
+git+https://github.com/ipython/ipython#egg=ipython[test]
+git+https://github.com/jupyter/jupyter_client#egg=jupyter_client[test]
+git+https://github.com/ipython/ipykernel#egg=ipykernel[test]
+git+https://github.com/jupyter/nbconvert#egg=nbconvert[test]
+git+https://github.com/jupyter/notebook#egg=notebook[test]
+git+https://github.com/jupyter-widgets/ipywidgets#egg=ipywidgets
